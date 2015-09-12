@@ -23,13 +23,24 @@ function myajax_call(dataobj, success_fxn){
     });
   };
 
+  //change the background pick size for mobile capat.
+  function getpicsize( imgsize){
+    var viewport = getWindowSize();
+     if( viewport == 'xs' ) {
+      return "100px"
+    }
+    else{
+      return imgsize;
+    }
+  };
+
 //function to set the background img size
  function setbackground_size(elem_ids, itemtype, imgsize, bkgrdsize){
     for(i=0; i< elem_ids.length; i++){
       var elem = "#"+itemtype+"_item"+ elem_ids[i].toString();
       console.log(elem)
       var background_url =  $(elem).attr("background-url");
-      console.log(background_url);
+      var imgsize = getpicsize(imgsize);
       var bkimg_style = { "background-image": "url(/imgs/"+itemtype+"/"+background_url,
                           "min-height":imgsize, "width":"100%",
                           "background-repeat": "no-repeat",
@@ -39,6 +50,16 @@ function myajax_call(dataobj, success_fxn){
       $(elem).css(bkimg_style)
     }
   };
+  //get window size function for mobile to resize imgs
+  //768px, 992px and 1200px
+  function getWindowSize(){
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    if(w < 768){
+      return "xs";
+    }
+  };
+
 
   //js for cafe page
   var cafes = $("#cafe");
@@ -140,9 +161,3 @@ function myajax_call(dataobj, success_fxn){
 
 
 };
-// if ($(window).width() < 1280) {
-//    alert('Less than 1280');
-// }
-// else {
-//    alert('More than 1280');
-// }

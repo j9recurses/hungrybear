@@ -12,15 +12,3 @@ development:
   pool: 5
   username: myrailsbuddy
   password: mypass
-
- # <<: *defaults
-
-test:
-  database: menuapp_test
-  host: localhost
-  #<<: *defaults
-
-production:
-  database: menuapp_production
-  host: localhost
-  #<<: *defaults

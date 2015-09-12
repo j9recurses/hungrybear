@@ -1,0 +1,61 @@
+
+ <div class="row posheader"> Student Orders </div>
+
+ <div class="row poshd">
+  <div class="col-xs-1">
+       <div class="cafe_head_pos">Order Id</div>
+  </div>
+  <div class="col-xs-1">
+       <div class="cafe_head_pos">Pickup Date</div>
+  </div>
+  <div class="col-xs-1">
+    <div class="cafe_head_pos">Pickup Time</div>
+  </div>
+  <div class="col-xs-1">
+    <div class="cafe_head_pos">Student Id</div>
+  </div>
+      <div class="col-xs-1">
+       <div class="cafe_head_pos">Student Name</div>
+  </div>
+    <div class="col-xs-2">
+       <div class="cafe_head_pos">Order Details</div>
+  </div>
+  <div class="col-xs-2">
+       <div class="cafe_head_pos">Pickup Status</div>
+  </div>
+  <div class="col-xs-4 posheadnobk">
+  </div>
+ </div>
+
+<% @userorders.each do | order| %>
+  <div id="userorder" class="row">
+     <div class="col-xs-1">
+       <%=order[:order_id]%>
+      </div>
+      <div class="col-xs-1">
+      <%=order[:pickupdate]%>
+      </div>
+      <div class="col-xs-1">
+       <%=order[:pickuptime]%>
+      </div>
+     <div class="col-xs-1">
+      <%=order[:student_id]%>
+      </div>
+      <div class="col-xs-1">
+       <%=order[:name]%>
+      </div>
+      <div class="col-xs-2">
+       <%=order[:order_details]%>
+      </div>
+       <div class="col-xs-1">
+       <%if order[:pickup]%>
+        complete
+        <%else%>
+        <button id="pickupstatus"> &#x2713; </button>
+        <%end%>
+      </div>
+
+</div>
+
+<%end%>
+

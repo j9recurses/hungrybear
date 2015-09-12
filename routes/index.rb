@@ -28,6 +28,16 @@
     status 202
   end
 
+  get '/pos' do
+    @userorders = [
+        {userid:1, student_id:12345, name:"Bill", order_id:1, order_details:"Pizza, Chicken Tenders", pickuptime: "1:00pm", pickupdate:"9/12/2015", pickup:false},
+        {userid:2, student_id:123456, name:"Jane", order_id:2, order_details:"Turkey Club", pickuptime: "12:00pm", pickupdate:"9/12/2015", pickup:false},
+        {userid:3, student_id:1234567, name:"Joe", order_id:3, order_details:"Turkey Club, Pizza", pickuptime: "11:10am", pickupdate:"9/12/2015", pickup:true},
+        {userid:3, student_id:1234568, name:"Jimmy", order_id:4, order_details:"Mac and Cheese", pickuptime: "11:00am", pickupdate:"9/12/2015", pickup:true},
+    ]
+    erb :pos
+  end
+
 
 #   get '/projects' do
 #     @projects = Project.all

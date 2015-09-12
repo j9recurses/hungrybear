@@ -24,7 +24,7 @@ tr = Cafe.where(mycafe_id: 4).pluck(:id).join("").to_i
 
 
 Menu.delete_all
-Menu.create(name:"Turkey Club", price:7.50, cafe_id:gb, menu_img:"sandwiches.jpg", description:"Turkey, bacon, swiss, lettuce, tomato & chipotle Sauce served on sourdough bread")
-Menu.create(name:"Mac and Cheese", price:8.25, cafe_id:gb, menu_img:"sandwiches.jpg", description:"Cheesey and Hot!")
-Menu.create(name:"Pizza", price:8.50, cafe_id:gb, menu_img:"sandwiches.jpg", description:"Cheesy and lots of toppings! Will satisfy")
-Menu.create(name:"Chicken Tenders", price:6.50, menu_img:"sandwiches.jpg", cafe_id:gb, description:"Crispy and delicious!")
+Menu.create(name:"Turkey Club", price:7.50, cafe_id:gb, menu_img:"sandwiches.jpg", description:"Turkey, bacon, swiss, lettuce, tomato & chipotle Sauce served on sourdough bread.")
+Menu.create(name:"Mac and Cheese", price:8.25, cafe_id:gb, menu_img:"mac.jpg", description:"Cheesey and Hot!")
+Menu.create(name:"Pizza", price:8.50, cafe_id:gb, menu_img:"pizza.jpg", description:"Cheesy and lots of toppings! Will satisfy.")
+Menu.create(name:"Chicken Tenders", price:6.50, menu_img:"comfortfoods.jpg", cafe_id:gb, description:"Crispy and delicious!")
