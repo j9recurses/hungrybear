@@ -1,0 +1,20 @@
+     <%counter = 0 %>
+    <%@food_generes.each do  |food| %>
+    <%if counter % 2 == 0%>
+    <div class="row">
+      <div  id="food_genres_item<%=food.myfood_genres_id%>" class="col-sm-4" background-url="<%=food.foodgenre_img%>">
+        <div class="row">
+          <h3 class="cafe_head"> <%=food.name%></h3>
+        </div>
+      </div>
+      <%counter= counter+ 1%>
+      <%else%>
+      <div id="food_genres_item<%=food.myfood_genres_id%>" class="col-sm-4" background-url="<%=food.foodgenre_img%>">
+        <div class="row">
+          <h3 class="cafe_head"> <%=food.name%></h3>
+        </div>
+      </div>
+    </div>
+    <%counter= counter+ 1%>
+    <%end%>
+    <%end%> -->

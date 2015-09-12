@@ -1,0 +1,247 @@
+@font-face {
+    font-family: calvertMT;
+    src: url('../fonts/calvertMT/Calvert MT Std Bold.otf');
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('../fonts/proximaNova/Calvert MT Std Bold.otf');
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+::selection {
+    background: rgba(0, 0, 0, .1)
+}
+::-moz-selection {
+    background: rgba(0, 0, 0, .1)
+}
+img::selection {
+    background: 0 0
+}
+img::-moz-selection {
+    background: 0 0
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body {
+  overflow-y:scroll;
+    margin: 0;
+    -webkit-font-smoothing: antialiased
+}
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+body {
+    font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #515151;
+    overflow-y:scroll;
+    overflow-x:auto;
+    /*background-color: #eff1f2*/
+}
+
+.navbar-inverse{
+  background-color:#003262;
+}
+
+a{
+  color:#003262;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a.hungrybear-logo {
+  font-family:calvertMT;
+  color:#FDB515;
+  /*color:#C4820E;*/
+}
+
+a.hungrybear-logo:hover{
+   color:#FDB515;
+   background-color:#003262;
+   text-decoration:none;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color:white;
+ }
+
+
+a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+   /*background-color:#003262;*/
+    background-color:white;
+    color:#003262;
+ }
+
+ .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+    color:#003262;
+ }
+
+a.icon-block{
+  color:white;
+  font-size:18px;
+}
+
+.dropdown-toggle{
+  font-size:120%;
+}
+
+
+a.icon-block:hover{
+  color:#FDB515;
+}
+
+.dropdown{
+  margin-top:10%;
+}
+
+.nav_lunchbag{
+  margin-top:8%;
+  margin-left:-5%;
+}
+
+
+#userbagcnt{
+  float:right;
+  font-size:18px;
+  padding-left:5px;
+  padding-top:2px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color:#FDB515;
+}
+/********main content**********/
+.indexcafe{
+  border-bottom: 1px solid;
+  border-bottom-color:#003262;
+  font-family:calvertMT;
+  font-size:200%;
+   color:#003262;
+  padding-top:3%;
+}
+
+.indexcafe2{
+  padding-top:3%;
+}
+
+h3.cafe_head{
+  color:#003262;
+
+}
+
+a.cafedetail{text-decoration: none;}
+
+
+.cafelisting{
+  margin-top:1%;
+  margin-bottom:1%;
+  margin-left:3%;
+  margin-right:3%;
+}
+
+/*******menu page styles********/
+.menuheader{
+    border-bottom: 1px solid;
+  border-bottom-color:#003262;
+  font-family:calvertMT;
+  font-size:200%;
+   color:#003262;
+}
+
+a.menulinkhead:hover {
+    background-color:#FDB515;;
+}
+
+.menu_header_box{
+  padding-top:3%;
+  padding-bottom:1%;
+}
+
+.left_arrow_box{
+}
+
+.left_arrow{
+   color:#003262;
+  font-size:200%;
+    border-bottom: 1px solid;
+  border-bottom-color:#003262;
+  font-family:calvertMT;
+}
+
+.menu_single{
+  padding-top:3%;
+   padding-bottom:3%;
+}
+
+
+.menu_description_text{
+  box-sizing: border-box;
+  margin-left:2px;
+}
+
+.menu_info{
+  margin-left:1%;
+}
+
+.menu_modal_top_area{
+  padding-bottom:3%;
+}
+
+.btn-primary{
+background-color:#003262;
+border-color:#003262;
+}
+
+.btn-primary:hover{
+background-color:#003262;
+border-color:#003262;
+}
+
+h4{
+   color:#003262;
+   font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.control-label{
+  color:#003262;
+   font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+#modal_menu_description{
+  font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #515151;
+}
+/******FOOTER STYLES**************/
+footer {
+    background-color: rgb(249, 249, 249);
+    padding: 20px 15px;
+    text-align: center;
+    margin-top:5%;
+}
+
+
+.footer-nav a:not(:hover), .footer-nav {
+   color:#003262;
+}
+

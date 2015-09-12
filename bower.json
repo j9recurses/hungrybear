@@ -1,0 +1,23 @@
+{
+  "name": "menuapp",
+  "version": "0.0.0",
+  "authors": [
+    "j9recurses <j9.heiser@ischool.berkeley.edu>"
+  ],
+  "description": "A menuapp for the RideCell Coding Challenge",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "lodash": "~3.10.1"
+  }
+}

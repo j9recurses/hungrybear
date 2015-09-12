@@ -1,0 +1,91 @@
+<div class="row menu_header_box">
+<!--  <div class="col-xs-1"></div> -->
+  <div class="col-xs-8">
+        <div class="menuheader">
+        <a class="menulinkhead" href="/"> &#10094 <%=@cafe_name%> &#10094 </a>
+        Menu Items
+        </div>
+  </div>
+  <div class="col-xs-4"></div>
+</div>
+
+
+
+
+
+<div id="menu_items" class="row" menu-ids="<%= @menu_items_ids%>">
+ <!--  <div class="col-xs-1"></div> -->
+  <div class="col-xs-9">
+    <% @menu_items.each do | item|%>
+    <div class="row menu_single">
+      <a class="menudetail" data-toggle="modal" data-target="#menu_modal" data-menu-name="<%=item.name%>" data-menu-price="<%= '%.2f' % item.price%>"  data-menu-description="<%=item.description%>"  data-menu-id="<%=item.id%>"  data-menu-img="<%=item.menu_img%>">
+        <div class="col-xs-4">
+          <div class="menu_item_bkgrd" id="menu_item<%=item.id%>" background-url="<%=item.menu_img%>"></div>
+        </div>
+        <div class="col-xs-4 menu_info">
+          <div class="row">
+            <h3 class="cafe_head"> <%=item.name%></h3>
+            <div class="row menu_description_text">
+              <%=item.description%>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1">
+          <div class="row">
+            <h3 class="cafe_head"> $<%= '%.2f' % item.price%></h3>
+          </div>
+        </div>
+      </a>
+    </div>
+    <%end%>
+   </div>
+    <div class="col-xs-3"></div>
+</div>
+
+
+
+<div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="menuModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+
+      <div id="menu_item_id" data-menu-item-id=""></div>
+      <div class="container-fluid menu_modal_top_area">
+          <div class="row">
+            <div class="col-xs-4">
+              <div id="modal_menu_img"></div>
+            </div>
+            <div class="col-xs-5">
+              <div class="row">
+                <h4 class="modal_menu_name"></h4>
+                <div id="modal_menu_description"></div>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="row">
+                <h4 class="modal_menu_price"></h4>
+              </div>
+             <div class="col-xs-1"></div>
+            </div>
+          </div>
+      </div>
+        <form>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Special Instructions:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="modalAddtoLunchbagAndCheckout" type="button" class="btn btn-default">Add to Lunch Bag and Checkout</button>
+        <button id="modalAddtoLunchbag" type="button" class="btn btn-primary" >Add to Lunch Bag</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

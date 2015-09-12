@@ -1,0 +1,34 @@
+<div id="cafe" cafe-ids="<%=@cafe_ids%>" class="row">
+<!--   <div class="col-sm-1"></div> -->
+  <div class="col-xs-8">
+    <div class="row indexcafe">Menu By Cafe</div>
+    <%counter = 0 %>
+    <%@cafes.each do  |cafe| %>
+    <%if counter % 2 == 0%>
+    <div class="row">
+     <div class="col-xs-4 cafelisting">
+        <a class="cafedetail" href="menus/<%=cafe.id%>">
+          <h3 class="cafe_head"> <%=cafe.name%></h3>
+          <div id="cafe_item<%=cafe.id%>" class="col-xs-4" background-url="<%=cafe.logo_img%>"></div>
+          <%counter= counter+ 1%>
+        </a>
+      </div>
+      <%else%>
+      <div class="col-xs-4 cafelisting">
+        <a class="cafedetail" href="menus/<%=cafe.id%>">
+          <h3 class="cafe_head"> <%=cafe.name%></h3>
+          <div id="cafe_item<%=cafe.id%>" class="col-xs-4" background-url="<%=cafe.logo_img%>"></div>
+          <%counter= counter+ 1%>
+        </a>
+      </div>
+    </div>
+    <%end%>
+    <%end%>
+   <!--  <div id="indexfoodgenre" class="row indexcafe" indexfoodgenre-len="<%=@food_generes.size%>">Menu By Food Type</div>
+   -->
+    <div class="row indexcafe2" cafe-len="<%=@cafes.size%>"></div>
+  </div>
+
+  <div class="col-md-3"></div>
+</div>
+
