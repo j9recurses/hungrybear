@@ -10,5 +10,5 @@ bower install
 ###Create and Seed the DB
 cd into the app root dir
 then:
-  rake:db setup
-  rake:db seed
+  rake db:setup
+  rake db:seed
